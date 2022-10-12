@@ -1,0 +1,17 @@
+.product {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    box-shadow: #eb6ce233 6px 10px 24px;
+    border:1px solid pink;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    overflow: hidden;
+ 
+  }
+  
+  .product__thumbnail {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+  }
