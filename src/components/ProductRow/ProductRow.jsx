@@ -1,13 +1,14 @@
-import {CartIcon} from "./../CartIcon"
-export default function ProductRow({ product }) {
-
+import {CartIcon} from "./../CartIcon";
+const ProductRow = ({ product }) => {
   return (
-   
-  <div>
-     <img src={product.thumbnail}/>
-    <p>{product.title} - {product.price}pln</p>
-{/* 
-    <CartIcon /> */}
+    <div>
+      <img src={product.thumbnail} />
+      <p>
+        {product.title} - {product.price}pln
+      </p>
+      <CartIcon />
     </div>
   );
-}
+};
+
+export default ProductRow;
