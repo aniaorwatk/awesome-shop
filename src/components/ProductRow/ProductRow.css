@@ -2,10 +2,10 @@
     display: flex;
     flex-direction: column;
     width: 300px;
-    box-shadow: #eb6ce233 6px 10px 24px;
-    border:1px solid pink;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+    box-shadow:  5px 5px 24px;
+    border-bottom:2px solid rgb(184, 93, 192);
+    border-right:2px solid rgb(202, 133, 202) ;
+    border-radius: 5px;
     overflow: hidden;
  
   }
@@ -14,4 +14,5 @@
     width: 100%;
     height: 150px;
     object-fit: cover;
+    object-position: center;
   }

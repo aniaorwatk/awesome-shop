@@ -8,7 +8,7 @@ const ProductsList = ({ products }) => {
       {products.map((product) => {
         return <ProductRow product={product} key={product.id} />;
       })}
-      lista produktów
+    
     </div>
   );
 };

@@ -1,6 +1,6 @@
 const Search = ({ searchValue, setSearchValue }) => {
   return (
-    <input
+    <input className="inputSearch"
       type="text"
       value={searchValue}
       placeholder="Search..."

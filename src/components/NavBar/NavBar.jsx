@@ -1,12 +1,14 @@
-import {CartIcon} from "../CartIcon.jsx";
-import Search from "./Search.jsx";
+import { CartIcon } from "../CartIcon.jsx";
+import Search from "../Search.jsx";
 import "./NavBar.css";
 
 const NavBar = ({ searchValue, setSearchValue }) => {
   return (
-    <header>
+    <header className="header">
       <h1>Awesome Shop</h1>
-      <Search searchValue={searchValue} setSearchValue={setSearchValue} />
+      <Search 
+      searchValue={searchValue} 
+      setSearchValue={setSearchValue} />
       <CartIcon />
     </header>
   );
