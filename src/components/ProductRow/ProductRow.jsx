@@ -1,6 +1,8 @@
+import { useCart } from "../CartContext";
 import { CartIcon } from "./../CartIcon";
 import "./ProductRow.css";
 const ProductRow = ({ product }) => {
+  let cart =useCart()
   return (
     <div className="product">
       <img 
@@ -8,7 +10,7 @@ const ProductRow = ({ product }) => {
       src={product.thumbnail} 
       />
       {product.title} - {product.price}pln
-      <CartIcon />
+      <CartIcon onClick={()=> {cart.setItem([...cart.items, product])}}/>
       {product.category}
     </div>
   );
