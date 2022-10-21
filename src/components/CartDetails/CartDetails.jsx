@@ -3,9 +3,7 @@ import { useCart } from "../CartContext";
 export const CartDetails = () => {
   const cart = useCart();
 
-  let sum = cart.items.reduce((sum, item) => {
-    return sum + item.price;
-  }, 0);
+  let sum = cart.items.reduce((sum, item) => { return sum + item.price},0);
 
   return (
     <div>

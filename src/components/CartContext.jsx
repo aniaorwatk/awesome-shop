@@ -7,11 +7,8 @@ export function useCart() {
 }
 
 export function CartContextProvider({ children }) {
-    const [items,setItems]= useState([])
-    const defaultValue={
-        items,
-        setItems
-    }
+    const [items,setCart]= useState([])
+    const defaultValue={items,setCart}
   return (
   <CartContext.Provider 
   value={defaultValue}>
