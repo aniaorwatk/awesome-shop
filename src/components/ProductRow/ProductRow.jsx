@@ -1,12 +1,16 @@
-import {CartIcon} from "./../CartIcon";
+import { useCart } from "../CartContext";
+import { CartIcon } from "./../CartIcon";
+import "./ProductRow.css";
 const ProductRow = ({ product }) => {
+  let cart = useCart();
   return (
-    <div>
-      <img src={product.thumbnail} />
-      <p>
-        {product.title} - {product.price}pln
-      </p>
-      <CartIcon />
+    <div className="product">
+      <img className="product__thumbnail" src={product.thumbnail} />
+      {product.title} - {product.price}pln
+      <CartIcon
+        onClick={() => {cart.setCart([...cart.items, product])}}
+      />
+      {product.category}
     </div>
   );
 };

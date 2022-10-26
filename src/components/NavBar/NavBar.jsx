@@ -1,15 +1,21 @@
-import {CartIcon} from "../CartIcon.jsx";
-import Search from "./Search.jsx";
+import { CartIcon } from "../CartIcon.jsx";
+import  Search  from "../Search"
+import { CartContext, useCart } from "../CartContext.jsx";
 import "./NavBar.css";
 
-const NavBar = ({ searchValue, setSearchValue }) => {
+ function NavBar({ searchValue, setSearchValue, setPage }) {
+let cart = useCart();
   return (
-    <header>
-      <h1>Awesome Shop</h1>
-      <Search searchValue={searchValue} setSearchValue={setSearchValue} />
-      <CartIcon />
+    <header className="header">
+      <h1 onClick={()=> setPage('list')}>Awesome Shop</h1>  
+      <Search 
+        searchValue={searchValue}
+        setSearchValue={setSearchValue}
+      />
+      <CartIcon  onClick={()=> setPage('cart') }/>
+      {cart.items.length}
     </header>
-  );
-};
+  )
+}
 
-export default NavBar;
+export default NavBar

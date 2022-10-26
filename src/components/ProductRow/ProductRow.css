@@ -1,0 +1,19 @@
+
+
+.product {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    box-shadow:  5px 5px 24px;
+    border-bottom:2px solid rgb(184, 93, 192);
+    border-right:2px solid rgb(202, 133, 202) ;
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: white;
+  }
+  
+  .product__thumbnail {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+  }
