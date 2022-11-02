@@ -1,6 +1,7 @@
 import { CartIcon } from "../CartIcon.jsx";
+import useCart from "../../hooks/useCart.js";
 import  Search  from "../Search"
-import { CartContext, useCart } from "../CartContext.jsx";
+import { CartContext } from "../CartContext.jsx";
 import "./NavBar.css";
 
  function NavBar({ searchValue, setSearchValue, setPage }) {
@@ -13,7 +14,7 @@ let cart = useCart();
         setSearchValue={setSearchValue}
       />
       <CartIcon  onClick={()=> setPage('cart') }/>
-      {cart.items.length}
+      {/* {cart.products.length} */}
     </header>
   )
 }

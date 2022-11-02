@@ -1,4 +1,5 @@
-import { useCart } from "../CartContext";
+// import { useCart } from "../CartContext";
+import useCart from "../../hooks/useCart";
 import { CartIcon } from "./../CartIcon";
 import "./ProductRow.css";
 const ProductRow = ({ product }) => {
@@ -8,7 +9,7 @@ const ProductRow = ({ product }) => {
       <img className="product__thumbnail" src={product.thumbnail} />
       {product.title} - {product.price}pln
       <CartIcon
-        onClick={() => {cart.setCart([...cart.items, product])}}
+        onClick={() => {cart.addProductFromCart(product)}}
       />
       {product.category}
     </div>
