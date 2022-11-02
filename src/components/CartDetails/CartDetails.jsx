@@ -1,14 +1,14 @@
-import { useCart } from "../CartContext";
+import useCart from "../../hooks/useCart";
 
 export const CartDetails = () => {
   const cart = useCart();
 
-  let sum = cart.items.reduce((sum, item) => { return sum + item.price},0);
+  let sum = cart.products.reduce((sum, item) => { return sum + item.price},0);
 
   return (
     <div>
       <div>
-        {cart.items.map((item) => {
+        {cart.products.map((item) => {
           return (
             <div key={item.id}>
               {item.title} - {item.price}pln
