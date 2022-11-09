@@ -1,4 +1,5 @@
 import useCart from "../../hooks/useCart";
+import products from "../../data/products";
 
 export const CartDetails = () => {
   const cart = useCart();
@@ -11,7 +12,7 @@ export const CartDetails = () => {
         {cart.products.map((item) => {
           return (
             <div key={item.id}>
-              {item.title} - {item.price}pln
+              {item.title} - {item.price}pln <button onClick={() => cart.removeProductFromCart(item)}> X </button>
             </div>
           );
         })}

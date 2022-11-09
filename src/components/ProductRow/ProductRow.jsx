@@ -2,6 +2,7 @@
 import useCart from "../../hooks/useCart";
 import { CartIcon } from "./../CartIcon";
 import "./ProductRow.css";
+
 const ProductRow = ({ product }) => {
   let cart = useCart();
   return (

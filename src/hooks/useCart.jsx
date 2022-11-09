@@ -1,5 +1,6 @@
 import { useQuery,useMutation } from "@tanstack/react-query";
-import {queryClient} from "../App.js"
+import {queryClient} from "../main";
+import products from "../data/products";
 
 const useCart = () => {
   const query = useQuery(["carts", 1], async () => {
@@ -16,6 +17,8 @@ const useCart = () => {
           "Content-Type": "application/json",
         },
       });
+      const updatedCart = await response.json()
+      return updatedCart
     },
     {
       onSuccess: () => {
@@ -26,7 +29,7 @@ const useCart = () => {
 
   const removeProductFromCart = (removeProduct) => {
     mutation.mutate({
-        products: query.data.products.filter(product => product.id !== removeProduct )
+        products: query.data.products.filter(product => product.id !== removeProduct.id )
       });
 
   };
